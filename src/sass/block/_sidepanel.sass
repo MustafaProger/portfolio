@@ -1,0 +1,40 @@
+.sidepanel
+    position: fixed
+    width: 400px
+    top: 400px
+    left: -150px
+    z-index: 10
+    display: flex
+    justify-content: space-around
+    align-items: center
+    color: #fff
+    transform: rotate(-90deg)
+    hr
+        width: 70px
+        height: 2px
+        padding: 0 15px
+        background: white
+        border: none
+    .social-media__block
+        .social-media__link
+            padding: 0 5px
+            &:nth-child(1)
+                padding: 0 5px 0 0
+            svg
+                width: 20px
+                height: 20px
+                path
+                    transition: all 0.25s
+        .github
+            svg:hover
+                path
+                    fill: #24282D
+
+        .telegram
+            svg:hover
+                path
+                    fill: $main-color
+        .whatsapp
+            svg:hover
+                path
+                    fill: rgb(67, 192, 82)

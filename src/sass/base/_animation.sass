@@ -1,0 +1,40 @@
+@keyframes appearanceLayer 
+    0% 
+        opacity: 0
+    100% 
+        opacity: 1
+
+@keyframes appearanceMenu 
+    0% 
+        opacity: 1
+        transform: translateX(-100%)
+    100% 
+        opacity: 1
+        transform: translateX(0)
+    
+@keyframes fadeLayer 
+    0% 
+        opacity: 1
+    100% 
+        opacity: 0
+    
+@keyframes fadeMenu 
+    0% 
+        opacity: 1
+        transform: translateX(0)
+    100% 
+        opacity: 1
+        transform: translateX(-100%)
+    
+
+.appearanceLayer 
+    animation: appearanceLayer .5s ease-in-out
+
+.appearanceMenu 
+    animation: appearanceMenu .5s ease-in-out
+
+.fadeLayer 
+    animation: fadeLayer .5s ease-in-out
+
+.fadeMenu 
+    animation: fadeMenu .5s ease-in-out

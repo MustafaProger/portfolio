@@ -1,0 +1,58 @@
+.promo
+    position: relative
+    height: 100vh
+    padding: 20px 30px 0 50px
+    color: #fff
+    background: url('../img/promo/background.jpg') center (center / cover) no-repeat
+    .menu__burger
+        position: absolute
+        top: 15px
+        right: 30px
+        cursor: pointer
+        width: 60px
+        height: 60px
+        border-radius: 10%
+        &:hover,
+        &:focus 
+            background-color: rgba(256, 256, 256, 0.2)
+        &::before,
+        &::after,
+        span::after
+            content: ""
+            position: absolute
+            width: 30px
+            height: 3px
+            top: 17.5px
+            right: 12.5px
+            background-color: white
+        &::after
+            width: 36px
+            top: 27.5px
+        span::after
+            top: 37.5px
+
+    .content
+        padding: 239px 0 0 0
+        .title_fz16
+            position: relative
+            top: 0
+            left: 0
+            z-index: 1
+            padding: 0 0 0 10px
+            @include circle
+        .title
+            max-width: 532px
+        .button__block
+            max-width: 325px
+            display: flex
+            justify-content: space-between
+            .button__item
+                @include button
+            .button__item-1
+                &:hover
+                    box-shadow: 0px 0px 10px $main-color
+            .button__item-2
+                background: none
+                box-shadow: none
+                    
+            
