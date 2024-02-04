@@ -1,3 +1,6 @@
+body.lock
+    overflow: hidden
+    
 .sidepanel
     position: fixed
     width: 400px
@@ -8,6 +11,7 @@
     justify-content: space-around
     align-items: center
     color: #fff
+    transition: all 0.5s
     transform: rotate(-90deg)
     hr
         width: 70px
@@ -38,3 +42,10 @@
             svg:hover
                 path
                     fill: rgb(67, 192, 82)
+
+.sidepanel.сhange-theme
+    path, .title
+        color: #000
+        fill: #000
+    hr
+        background: #000
