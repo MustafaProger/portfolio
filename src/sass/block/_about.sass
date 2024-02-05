@@ -8,26 +8,23 @@
         align-items: center
         .about__img
             padding: 0 70px 0 0
-        .about__me
+        .about__descr
             position: relative
             .title_fz36
                 margin: 20px 0 10px 0
             .title_fz16
                 padding: 0 0 0 12px
                 @include circle
-            hr
-                width: 60px
-                height: 3px
-                background-color: $main-color
-                border: none
-            .descr
+            .divider
+                margin: 10px 0 0 0
+            .about__text
                 padding: 20px 0 40px 0
                 line-height: 25px
             .skill
                 display: grid
-                grid-template-columns: repeat(2, minmax(1px, 1fr))
-                grid-template-rows: repeat(2, minmax(1px, 1fr))
-                grid-auto-rows: repeat(2, minmax(1px, 1fr))
+                grid-template-columns: repeat(2, minmax(1px, auto))
+                grid-template-rows: repeat(2, minmax(1px, auto))
+                grid-auto-rows: repeat(2, minmax(1px, auto))
                 gap: 20px 50px
                 &__block
                     display: flex
@@ -47,6 +44,6 @@
                         padding: 0 0 6px 20px
                         .title
                             padding: 0 0 6px 0
-                        .descr
+                        .skill__descr
                             padding: 0
                             line-height: 20px

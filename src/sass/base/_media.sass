@@ -15,10 +15,10 @@
             &__img
                 display: none
             .content
-                .about__me
+                .about__descr
                     .skill
-                        grid-template-columns: repeat(2, minmax(1px, 1fr))
-                        grid-template-rows: repeat(2, minmax(1px, 1fr))
+                        grid-template-columns: repeat(2, minmax(1px, auto))
+                        grid-template-rows: repeat(2, minmax(1px, auto))
                         gap: 20px 0
                         .skill__block
                             .title_fz14
@@ -35,18 +35,24 @@
                 padding: 200px 0 0 0
                 .title_fz48
                     font-size: 30px
-    body
         .about
             .content
-                .about__me
+                .about__descr
                     .skill
-                        grid-template-columns: repeat(1, minmax(1px, 1fr))
-                        grid-template-rows: repeat(4, minmax(1px, 1fr))
+                        grid-template-columns: repeat(1, minmax(1px, auto))
+                        grid-template-rows: repeat(4, minmax(1px, auto))
+                    .title_fz36
+                        font-size: 24px
+        .resume
+            .title_fz36
+                font-size: 24px
+                margin: 26px 0 0 0
+
 
 @media (max-width: 375px)
-    .container
-        padding: 0 10px
     body
+        .container
+            padding: 0 10px
         .promo
             .menu__burger
                 position: absolute
@@ -54,8 +60,8 @@
                 right: 5px
         .about
             .content
-                .about__me
+                .about__descr
                     .title_fz36
                         font-size: 24px
-                    .descr
+                    .about__text
                         font-size: 15px
