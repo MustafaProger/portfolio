@@ -11,20 +11,14 @@
     
 @media (max-width: 1024px)
     body
-        .promo
-            height: 640px
-            .content
-                padding: 239px 0 0 0
-                .title_fz48
-                    font-size: 26px
         .about
             &__img
                 display: none
             .content
                 .about__me
                     .skill
-                        grid-template-columns: repeat(1, minmax(50px, 1fr))
-                        grid-template-rows: repeat(4, minmax(50px, 1fr))
+                        grid-template-columns: repeat(2, minmax(1px, 1fr))
+                        grid-template-rows: repeat(2, minmax(1px, 1fr))
                         gap: 20px 0
                         .skill__block
                             .title_fz14
@@ -32,6 +26,22 @@
                             .title_fz12
                                 font-size: 14px
                                 line-height: 25px
+                            
+@media (max-width: 768px)
+    body
+        .promo
+            height: 640px
+            .content
+                padding: 200px 0 0 0
+                .title_fz48
+                    font-size: 30px
+    body
+        .about
+            .content
+                .about__me
+                    .skill
+                        grid-template-columns: repeat(1, minmax(1px, 1fr))
+                        grid-template-rows: repeat(4, minmax(1px, 1fr))
 
 @media (max-width: 375px)
     .container
