@@ -1,11 +1,78 @@
 .resume
+    padding: 100px 0 0 0
+    .container
+        max-width: 986px
     .content
         position: relative
-        margin: 125px 0 0 0
-        .title
+        .title_fz36,
+        .title_fz16
             text-align: center
         .title_fz16
             @include circle
             &::before
                 left: 50%
                 transform: translateX(-50%)
+        .divider
+            margin-bottom: 60px
+        .resume__descr
+            display: grid
+            grid-template-columns: repeat(2, minmax(100px, auto))
+            grid-template-rows: repeat(1, minmax(100px, auto))
+            grid-auto-rows: minmax(100px, auto)
+            padding: 0 0 0 50px
+            gap: 45px 170px
+            .resume__block
+                .title_fz20
+                    position: relative
+                    &::before
+                        content: ''
+                        position: absolute
+                        top: 50%
+                        left: -50px
+                        z-index: 2
+                        width: 15px
+                        height: 15px
+                        border-radius: 100%
+                        background-color: $main-color
+                        transform: translateY(-50%)
+                .resume__descr-item
+                    position: relative
+                    &::before
+                        content: ""
+                        position: absolute
+                        top: -5px
+                        left: -43px
+                        width: 1px
+                        height: calc(100% + 5px)
+                        background-color: #000
+                        z-index: 1
+                    .resume__descr-head
+                        position: relative
+                        display: flex
+                        align-items: end
+                        padding: 45px 0 15px 15px
+                        &::before
+                            content: ""
+                            position: absolute
+                            top: 70px
+                            left: -42px
+                            width: 42px
+                            height: 1px
+                            background-color: #000
+                            z-index: 1
+                        .resume__descr-icon
+                            position: relative
+                            z-index: 2
+                            padding: 0 15px 0 0
+                            @include circle
+                            &::before
+                                top: -15px
+                                left: -15px
+                        .title_fz14
+                            margin-bottom: 5px
+                        .subtitle
+                            font-weight: 400
+
+                    .resume__descr-text
+                        span
+                            font-weight: 600

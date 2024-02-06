@@ -2,7 +2,7 @@
 @import '../base/variable'
 
 .about
-    padding: 88px 0 0 0
+    padding: 100px 0 0 0
     .content
         display: flex
         align-items: center
@@ -24,8 +24,8 @@
                 display: grid
                 grid-template-columns: repeat(2, minmax(1px, auto))
                 grid-template-rows: repeat(2, minmax(1px, auto))
-                grid-auto-rows: repeat(2, minmax(1px, auto))
-                gap: 20px 50px
+                grid-auto-rows: minmax(1px, auto)
+                gap: 30px 50px
                 &__block
                     display: flex
                     position: relative
@@ -46,4 +46,3 @@
                             padding: 0 0 6px 0
                         .skill__descr
                             padding: 0
-                            line-height: 20px

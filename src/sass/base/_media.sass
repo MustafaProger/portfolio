@@ -4,7 +4,7 @@
             .content 
                 height: 90vh
     
-@media (max-width: 1440px)
+@media (max-width: 1400px)
     body
         .sidepanel
             display: none
@@ -14,18 +14,6 @@
         .about
             &__img
                 display: none
-            .content
-                .about__descr
-                    .skill
-                        grid-template-columns: repeat(2, minmax(1px, auto))
-                        grid-template-rows: repeat(2, minmax(1px, auto))
-                        gap: 20px 0
-                        .skill__block
-                            .title_fz14
-                                font-size: 16px
-                            .title_fz12
-                                font-size: 14px
-                                line-height: 25px
                             
 @media (max-width: 768px)
     body
@@ -33,21 +21,28 @@
             height: 640px
             .content
                 padding: 200px 0 0 0
-                .title_fz48
-                    font-size: 30px
         .about
+            padding: 50px 0 0 0
             .content
                 .about__descr
                     .skill
                         grid-template-columns: repeat(1, minmax(1px, auto))
-                        grid-template-rows: repeat(4, minmax(1px, auto))
-                    .title_fz36
-                        font-size: 24px
+                        grid-template-rows: repeat(2, minmax(1px, auto))
         .resume
-            .title_fz36
-                font-size: 24px
-                margin: 26px 0 0 0
-
+            padding: 50px 0 0 0
+            .content
+                .divider 
+                    margin-bottom: 40px
+                .title_fz36
+                    margin: 26px 0 0 0
+                .resume__descr
+                    display: grid
+                    grid-template-columns: repeat(1, minmax(100px, auto))
+                    grid-template-rows: repeat(2, minmax(100px, auto))
+                    .resume__block 
+                        .resume__descr-item 
+                            .resume__descr-head::before 
+                                top: 78px
 
 @media (max-width: 375px)
     body
@@ -58,10 +53,3 @@
                 position: absolute
                 top: 5px
                 right: 5px
-        .about
-            .content
-                .about__descr
-                    .title_fz36
-                        font-size: 24px
-                    .about__text
-                        font-size: 15px
