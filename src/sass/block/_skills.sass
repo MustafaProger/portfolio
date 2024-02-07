@@ -1,0 +1,31 @@
+.skills
+    padding: 100px 0 0 0
+    .title
+        text-align: center
+    .title_fz16
+        position: relative
+        @include circle
+        &::before
+            left: 50%
+            transform: translateX(-50%)
+    .skills__list
+        display: grid
+        grid-template-columns: repeat(auto-fill, minmax(270px, auto))
+        grid-template-rows: repeat(1, minmax(270px, auto))
+        grid-auto-rows: minmax(270px, auto)
+        gap: 15px
+        .skills__item
+            display: flex
+            flex-direction: column
+            padding: 30px 30px 25px 30px
+            border: 1px solid #000
+            .skills__icon
+                height: 65px
+                padding: 0 0 20px 0
+                img.jquery
+                    width: 160px
+                    height: 65px
+            .title_fz14
+                text-align: left
+                padding-bottom: 15px
+                
