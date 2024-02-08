@@ -56,6 +56,9 @@
 
     <!-- Подлючение style.min.css  -->
     <link rel="stylesheet" href="css/style.min.css">
+
+    <!-- Подлючение анимаций AOS  -->
+    <link href="css/aos.css" rel="stylesheet">
 </head>
 
 
@@ -111,7 +114,7 @@
                 <ul class="list">
                     <li class="list__item"><a href="#about" class="list__hyprelink">ПРО МЕНЯ</a></li>
                     <li class="list__item"><a href="#resume" class="list__hyprelink">МОЙ ОПЫТ</a></li>
-                    <li class="list__item"><a href="#" class="list__hyprelink">МОИ НАВЫКИ</a></li>
+                    <li class="list__item"><a href="#skills" class="list__hyprelink">МОИ НАВЫКИ</a></li>
                     <li class="list__item"><a href="#" class="list__hyprelink">МОИ РАБОТЫ</a></li>
                     <li class="list__item"><a href="#" class="list__hyprelink">ПРАЙС-ЛИСТ</a></li>
                     <li class="list__item"><a href="#" class="list__hyprelink">КОНТАКТЫ</a></li>
@@ -131,20 +134,21 @@
     <section class="about" id="about">
         <div class="container">
             <div class="content">
-                <div class="about__img">
+                <div class="about__img" data-aos="fade-right" data-aos-once="true">
                     <img src="img/about/about.jpg" alt="photo">
                 </div>
                 <div class="about__descr">
-                    <div class="title title_fz16">Про меня</div>
-                    <h1 class="title title_fz36">Меня зовут Мустафа</h1>
-                    <hr class="divider">
-                    <p class="about__text title_fz16">Меня зовут Мустафа, родился 24 ноября 2005 года. Увлеченно изучаю
+                    <div class="title title_fz16" data-aos="fade-down" data-aos-once="true">Про меня</div>
+                    <h1 class="title title_fz36" data-aos="fade-down" data-aos-once="true">Меня зовут Мустафа</h1>
+                    <hr class="divider" data-aos="fade-right" data-aos-once="true">
+                    <p class="about__text title_fz16" data-aos="fade-down" data-aos-once="true">Меня зовут Мустафа,
+                        родился 24 ноября 2005 года. Увлеченно изучаю
                         программирование, обучаюсь на втором курсе колледжа. Помимо учебы, увлекаюсь смешанными
                         единоборствами, что помогает мне поддерживать физическую форму и дисциплину. Мои интересы
                         широки: люблю читать книги по религии, психологии, саморазвитию и финансам. Ислам играет важную
                         роль в моей жизни, даря мне духовное руководство и мудрость.</p>
                     <div class="skill">
-                        <div class="skill__block">
+                        <div class="skill__block" data-aos="fade-down" data-aos-once="true">
                             <div class="skill__icon website"><img src="icons/about/web-development.svg"
                                     alt="web-development"></div>
                             <div class="skill__text">
@@ -153,7 +157,7 @@
                                     внимание на скорость, дизайн, удобство пользователя и техническую оптимизацию.</p>
                             </div>
                         </div>
-                        <div class="skill__block">
+                        <div class="skill__block" data-aos="fade-down" data-aos-once="true">
                             <div class="skill__icon phone"><img src="icons/about/phone.svg" alt="phone"></div>
                             <div class="skill__text">
                                 <div class="title title_fz14">Разработка приложений</div>
@@ -161,7 +165,7 @@
                                     приложения, обеспечивая безопасность и инновационные функции.</p>
                             </div>
                         </div>
-                        <div class="skill__block">
+                        <div class="skill__block" data-aos="fade-down" data-aos-once="true">
                             <div class="skill__icon design"><img src="icons/about/design.svg" alt="design"></div>
                             <div class="skill__text">
                                 <div class="title title_fz14">UI/UX Design</div>
@@ -169,7 +173,7 @@
                                     дизайне интерфейсов, обогащая пользовательский опыт и функциональность.</p>
                             </div>
                         </div>
-                        <div class="skill__block">
+                        <div class="skill__block" data-aos="fade-down" data-aos-once="true">
                             <div class="skill__icon telegram"><img src="icons/about/telegram.svg" alt="telegram"></div>
                             <div class="skill__text">
                                 <div class="title title_fz14">Телеграм боты</div>
@@ -186,14 +190,14 @@
     <section class="resume" id="resume">
         <div class="container">
             <div class="content">
-                <h2 class="title title_fz16">Опыт</h2>
-                <h1 class="title title_fz36">Чем я буду полезен</h1>
-                <hr class="divider">
+                <h2 class="title title_fz16" data-aos="fade-down" data-aos-once="true">Опыт</h2>
+                <h1 class="title title_fz36" data-aos="fade-down" data-aos-once="true">Чем я буду полезен</h1>
+                <hr class="divider" data-aos="fade-down" data-aos-once="true">
                 <div class="resume__descr">
                     <div class="resume__block education">
                         <h3 class="title title_fz20">Образование</h3>
                         <div class="resume__descr-item">
-                            <div class="resume__descr-head">
+                            <div class="resume__descr-head" data-aos="fade-right" data-aos-once="true">
                                 <div class="resume__descr-icon"><img src="icons/experience/university.svg"
                                         alt="university"></div>
                                 <div class="title-and-subtitle">
@@ -201,14 +205,14 @@
                                     <p class="subtitle title title_fz12">Диплом | 2022-2026</p>
                                 </div>
                             </div>
-                            <div class="resume__descr-text title_fz12">
+                            <div class="resume__descr-text title_fz12" data-aos="fade-right" data-aos-once="true">
                                 В процессе обучения в колледже КМЭПТ я приобрел основы программирования и разработки.
                                 Несмотря на то, что я все еще продолжаю свое образование, активно применяю полученные
                                 знания в практических проектах.
                             </div>
                         </div>
                         <div class="resume__descr-item">
-                            <div class="resume__descr-head">
+                            <div class="resume__descr-head" data-aos="fade-right" data-aos-once="true">
                                 <div class="resume__descr-icon"><img src="icons/experience/courses.svg" alt="courses">
                                 </div>
                                 <div class="title-and-subtitle">
@@ -216,7 +220,7 @@
                                     <p class="subtitle title title_fz12">Курсы</p>
                                 </div>
                             </div>
-                            <div class="resume__descr-text title_fz12">
+                            <div class="resume__descr-text title_fz12" data-aos="fade-right" data-aos-once="true">
                                 Я успешно прошел курс "WEB-разработчик" на <span>Udemy</span> и сейчас осваиваю
                                 "<span>JavaScript + React</span>". Эти курсы расширили мои навыки в веб-разработке и
                                 дизайне, позволяя браться за сложные проекты.
@@ -226,7 +230,7 @@
                     <div class="resume__block experience">
                         <h3 class="title title_fz20">Опыт работы</h3>
                         <div class="resume__descr-item">
-                            <div class="resume__descr-head">
+                            <div class="resume__descr-head" data-aos="fade-right" data-aos-once="true">
                                 <div class="resume__descr-icon"><img src="icons/experience/developer.svg"
                                         alt="developer"></div>
                                 <div class="title-and-subtitle">
@@ -234,14 +238,14 @@
                                     <p class="subtitle title title_fz12">Создание сайтов</p>
                                 </div>
                             </div>
-                            <div class="resume__descr-text title_fz12">
+                            <div class="resume__descr-text title_fz12" data-aos="fade-right" data-aos-once="true">
                                 Разработал несколько одностраничных сайтов, включая проекты с полным функционалом и
                                 интеграцией <span>PHPMailer</span> для отправки сообщений на электронную почту. Мой опыт
                                 подчеркивает готовность к реализации комплексных задач.
                             </div>
                         </div>
                         <div class="resume__descr-item">
-                            <div class="resume__descr-head">
+                            <div class="resume__descr-head" data-aos="fade-right" data-aos-once="true">
                                 <div class="resume__descr-icon design"><img src="icons/experience/design.svg"
                                         alt="design">
                                 </div>
@@ -250,7 +254,7 @@
                                     <p class="subtitle title title_fz12">Навыки в дизайне</p>
                                 </div>
                             </div>
-                            <div class="resume__descr-text title_fz12">
+                            <div class="resume__descr-text title_fz12" data-aos="fade-right" data-aos-once="true">
                                 Мои умения в <span>UI/UX</span> дизайне позволяют мне создавать интуитивно понятные и
                                 визуально привлекательные интерфейсы, улучшая пользовательский опыт и взаимодействие с
                                 продуктом.
@@ -262,56 +266,111 @@
         </div>
     </section>
 
-
     <section class="skills" id="skills">
         <div class="container">
             <div class="content">
-                <h2 class="title title_fz16">Навыки</h2>
-                <h1 class="title title_fz36">Что я использую в работе</h1>
-                <hr class="divider">
+                <h2 class="title title_fz16" data-aos="fade-down" data-aos-once="true">Навыки</h2>
+                <h1 class="title title_fz36" data-aos="fade-down" data-aos-once="true">Что я использую в работе</h1>
+                <hr class="divider" data-aos="fade-down" data-aos-once="true">
                 <div class="skills__list">
-                    <div class="skills__item">
+                    <div class="skills__item" data-aos="fade-down" data-aos-once="true" data-aos-delay="50">
                         <div class="skills__icon"><img src="icons/skills/html5.svg" alt="html5"></div>
                         <h4 class="title title_fz14">HTML5</h4>
                         <p class="skills__descr title_fz12">Именно он создает каркас вашего сайта или приложения, а
                             пятая версия позволит мне создавать более SEO-оптимизированную структуру вашего продукта</p>
                     </div>
-                    <div class="skills__item">
+                    <div class="skills__item" data-aos="fade-down" data-aos-once="true" data-aos-delay="100">
                         <div class="skills__icon"><img src="icons/skills/css3.svg" alt="html5"></div>
                         <h4 class="title title_fz14">CSS3</h4>
                         <p class="skills__descr title_fz12">Этот язык стилей позволяет мне создавать абсолютно любой
                             внешний вид вашего сайта или приложения. Все ограничивается только вашей фантазией!</p>
                     </div>
-                    <div class="skills__item">
+                    <div class="skills__item" data-aos="fade-down" data-aos-once="true" data-aos-delay="150">
                         <div class="skills__icon"><img src="icons/skills/JS.svg" alt="html5"></div>
                         <h4 class="title title_fz14">JavaScript</h4>
                         <p class="skills__descr title_fz12">Этот язык программирования позволяет оживить все что угодно:
                             слайдеры, окна, подсказки, вкладки, получение данных от сервера и многое другое</p>
                     </div>
-                    <div class="skills__item">
+                    <div class="skills__item" data-aos="fade-down" data-aos-once="true" data-aos-delay="200">
                         <div class="skills__icon jquery"><img class="jquery" src="icons/skills/Jquery.svg" alt="html5">
                         </div>
                         <h4 class="title title_fz14">Jquery</h4>
                         <p class="skills__descr title_fz12">Библиотека Jquery позволит ускорить разработку. Без
                             необходимости интегрировать в проект мы её не будем, но навык работы с ней присутствует</p>
                     </div>
-                    <div class="skills__item">
+                    <div class="skills__item" data-aos="fade-down" data-aos-once="true" data-aos-delay="250">
                         <div class="skills__icon"><img src="icons/skills/React.svg" alt="html5"></div>
                         <h4 class="title title_fz14">React</h4>
                         <p class="skills__descr title_fz12">Эта библиотека позволяет создавать web-приложения. Мы можем
                             создать максимально интерактивный продукт именно под ваши цели</p>
                     </div>
-                    <div class="skills__item">
+                    <div class="skills__item" data-aos="fade-down" data-aos-once="true" data-aos-delay="300">
                         <div class="skills__icon"><img src="icons/skills/Node.js.svg" alt="html5"></div>
                         <h4 class="title title_fz14">React</h4>
                         <p class="skills__descr title_fz12">Эта платформа позволяет создавать бэкенд для вашего продукта
                             - “мозги”, которые будут выполнять действия, которые пользователь не видит</p>
                     </div>
-                    <div class="skills__item">
+                    <div class="skills__item" data-aos="fade-down" data-aos-once="true" data-aos-delay="350">
                         <div class="skills__icon"><img src="icons/skills/git.svg" alt="html5"></div>
                         <h4 class="title title_fz14">Git</h4>
                         <p class="skills__descr title_fz12">Git – распределённая система управления версиями для
                             отслеживания изменений в файлах и координации работы между разработчиками</p>
+                    </div>
+                </div>
+                <div class="progress">
+                    <div class="progress__item">
+                        <div class="progress__item-text">
+                            <h4 class="title title_fz14">Создание сайтов</h4>
+                            <p class="percent">100%</p>
+                        </div>
+                        <div class="progressBarContainer">
+                            <div class="progressBar"></div>
+                        </div>
+                    </div>
+                    <div class="progress__item">
+                        <div class="progress__item-text">
+                            <h4 class="title title_fz14">Создание приложений</h4>
+                            <p class="percent">75%</p>
+                        </div>
+                        <div class="progressBarContainer">
+                            <div class="progressBar"></div>
+                        </div>
+                    </div>
+                    <div class="progress__item">
+                        <div class="progress__item-text">
+                            <h4 class="title title_fz14">Работа с данными</h4>
+                            <p class="percent">60%</p>
+                        </div>
+                        <div class="progressBarContainer">
+                            <div class="progressBar"></div>
+                        </div>
+                    </div>
+                    <div class="progress__item">
+                        <div class="progress__item-text">
+                            <h4 class="title title_fz14">Креативность</h4>
+                            <p class="percent">90%</p>
+                        </div>
+                        <div class="progressBarContainer">
+                            <div class="progressBar"></div>
+                        </div>
+                    </div>
+                    <div class="progress__item">
+                        <div class="progress__item-text">
+                            <h4 class="title title_fz14">Создание дизайна</h4>
+                            <p class="percent">90%</p>
+                        </div>
+                        <div class="progressBarContainer">
+                            <div class="progressBar"></div>
+                        </div>
+                    </div>
+                    <div class="progress__item">
+                        <div class="progress__item-text">
+                            <h4 class="title title_fz14">Soft skills</h4>
+                            <p class="percent">100%</p>
+                        </div>
+                        <div class="progressBarContainer">
+                            <div class="progressBar"></div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -323,6 +382,12 @@
 
     <!-- Подлючение JavaScript -->
     <script src="js/script.js"></script>
+
+    <!-- Подлючение анимаций AOS  -->
+    <script src="js/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>

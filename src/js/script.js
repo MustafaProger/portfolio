@@ -4,8 +4,9 @@ $(document).ready(function() {
         $('.navigation').addClass('active');
         $('.navigation').addClass('appearanceLayer');
         $('.navigation .content').addClass('appearanceMenu');
+        $('.list__item').addClass('appearanceList');
         $('body').addClass('lock');
-
+        
     });
     
     $('.close').on('click', function() {
@@ -20,6 +21,7 @@ $(document).ready(function() {
             $('.navigation .content').removeClass('appearanceMenu');
             // Удаляем класс active, делая меню невидимым
             $('.navigation').removeClass('active');
+            $('.list__item').removeClass('appearanceList');
             $('body').removeClass('lock');
             // Очищаем классы анимации исчезновения, чтобы они не мешали следующему появлению
             $('.navigation').removeClass('fadeLayer');
@@ -46,4 +48,50 @@ $(document).ready(function() {
         });
         return false;
     });
+});
+
+
+//работа с анимацией процентов в progressBar
+document.addEventListener('DOMContentLoaded', function() {
+    let percentElements = document.querySelectorAll(".percent");
+    let progressBarElements = document.querySelectorAll(".progressBar");
+    let animated = Array(percentElements.length).fill(false); // Флаги анимации для каждого прогресс-бара
+
+    function isInViewport(element) {
+        const rect = element.getBoundingClientRect();
+        return (
+            rect.top >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+        );
+    }
+
+    function updateProgressBar(i) {
+        let percentJS = 0;
+        let targetPercent = parseInt(percentElements[i].innerText.replace('%', ''), 10);
+
+        function animate() {
+            if (percentJS < targetPercent) {
+                percentJS++;
+                progressBarElements[i].style.width = percentJS + '%';
+                percentElements[i].innerText = percentJS + '%';
+                setTimeout(animate, 8)
+            }
+        }
+        animate();
+    }
+
+    function checkAndAnimateProgressBars() {
+        percentElements.forEach((item, i) => {
+            if (isInViewport(item) && !animated[i]) {
+                updateProgressBar(i);
+                animated[i] = true; // Помечаем прогресс-бар как анимированный
+            }
+        });
+    }
+
+    // Проверяем и анимируем прогресс-бары при первой загрузке страницы
+    checkAndAnimateProgressBars();
+
+    // Проверяем и анимируем прогресс-бары при прокрутке
+    window.addEventListener('scroll', checkAndAnimateProgressBars);
 });

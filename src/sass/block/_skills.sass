@@ -1,5 +1,5 @@
 .skills
-    padding: 100px 0 0 0
+    padding: 100px 0 
     .title
         text-align: center
     .title_fz16
@@ -29,3 +29,43 @@
                 text-align: left
                 padding-bottom: 15px
                 
+    .progress
+        padding: 120px 0 0 0
+        display: grid
+        grid-template-columns: repeat(auto-fill, minmax(300px, auto))
+        grid-template-rows: repeat(1, minmax(70px, auto))
+        grid-auto-rows: minmax(70px, auto)
+        gap: 30px 45px
+        .progress__item
+            position: relative
+            height: 70px
+            &-text
+                display: flex
+                justify-content: space-between
+                margin-top: 10px
+                .title_fz14
+                    margin-left: 12px
+                    @include circle
+                    &::before
+                        top: 0
+                        left: 0
+                .percent
+                    font-size: 14px
+            .progressBarContainer 
+                position: absolute
+                bottom: 0
+                left: 0
+                width: 100%
+                background-color: #eae9e9
+                border-radius: 4px
+                overflow: hidden
+            .progressBar 
+                height: 14px
+                background-color: #00B5E2
+                width: 0%
+                text-align: center
+                line-height: 30px
+                color: white
+                border-radius: 8px
+                transition: width 0.1s linear
+    
