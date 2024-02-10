@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 percentJS++;
                 progressBarElements[i].style.width = percentJS + '%';
                 percentElements[i].innerText = percentJS + '%';
-                setTimeout(animate, 8)
+                requestAnimationFrame(animate);
             }
         }
         animate();
