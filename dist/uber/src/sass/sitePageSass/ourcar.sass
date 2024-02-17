@@ -1,0 +1,72 @@
+@import '../_variables.sass'
+*
+    transition: all .0s ease-in-out 0s
+
+.ourcar
+    position: relative
+    height: 100%
+    width: 100%
+    padding: 100px 0 0 0
+    margin: 0
+    background-color: $color22
+    .title__ourcar
+        color: $color2
+        text-align: left
+    .about__ourcar-content
+        .text__ourcar
+            color: $color14
+            font-size: 19px
+            line-height: 35px
+            word-spacing: 4px
+            letter-spacing: 1.5px
+
+    .manual
+        .manual__block
+            padding: 20px 0
+            .title__manual
+                color: $color2
+            .text__manual
+                color: $color14
+                font-size: 19px
+                line-height: 35px
+                word-spacing: 4px
+                letter-spacing: 1.5px
+
+body.dark
+    .ourcar 
+        background-color: $color13
+        .title__ourcar
+                color: $color3
+        .about__ourcar-content
+            .text__ourcar
+                color: #ffffffa1
+        .manual
+            .manual__block
+                background-color: $color13
+                .title__manual
+                        color: $color3
+                .text__manual
+                    color: #ffffffa1
+            
+@media (max-width: 768px)
+    .ourcar
+        padding: 100px 0 25px 0
+        .title__ourcar
+            font-size: 23px
+        .about__ourcar-content
+            .text__ourcar
+                font-size: 16px
+                line-height: 30px
+                word-spacing: 2px
+                letter-spacing: 1px
+        .manual
+            .manual__block
+                padding: 10px 0
+                .title__manual
+                    font-size: 19px
+                    line-height: 35px
+                .text__manual
+                    font-size: 16px
+                    line-height: 30px
+                    word-spacing: 2px
+                    letter-spacing: 1px

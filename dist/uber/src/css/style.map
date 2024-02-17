@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "style.css",
+	"sources": [
+		"../sass/style.sass"
+	],
+	"sourcesContent": [
+		"button {\n\tcolor: #000;\n\tbackground-color: #fff; }\n\n\n$color1: #212121;\n$color2: #000000;\n$color3: #FFFFFF;\n$color4: #222222;\n$color5: #1EACC7;\n$color6: #202020;\n\n* {\n\tfont-family: \"Roboto\", sans-serif;\n\tbox-sizing: border-box;\n\t&__column-2 {\n\t\tmax-width: 500px; } }\n\n\n.grid {\n\tposition: fixed;\n\ttop: 0;\n\tright: 0;\n\tbottom: 0;\n\tleft: 0;\n\tz-index: -1;\n\ttext-align: center; }\n\n.main__page {\n\tmargin-bottom: 20px; }\n"
+	],
+	"names": [],
+	"mappings": ";;AAAA,AAAA,MAAM,CAAC;EACN,KAAK,EAAE,IAAI;EACX,gBAAgB,EAAE,IAAI;CAAG;;;AAU1B,AAAA,CAAC,CAAC;EACD,WAAW,EAAE,oBAAoB;EACjC,UAAU,EAAE,UAAU;CAEA;;;AADrB,AAAD,WAAW,CAAC;EACX,SAAS,EAAE,KAAK;CAAG;;;AAGrB,AAAA,KAAK,CAAC;EACL,QAAQ,EAAE,KAAK;EACf,GAAG,EAAE,CAAC;EACN,KAAK,EAAE,CAAC;EACR,MAAM,EAAE,CAAC;EACT,IAAI,EAAE,CAAC;EACP,OAAO,EAAE,EAAE;EACX,UAAU,EAAE,MAAM;CAAG;;;AAEtB,AAAA,WAAW,CAAC;EACX,aAAa,EAAE,IAAI;CAAG"
+}

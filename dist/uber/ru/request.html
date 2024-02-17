@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../src/icons/uber_icon_130805.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="../src/bootstrap/css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="../src/bootstrap/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="../src/css/burger.css">
+    <link rel="stylesheet" href="../src/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <title>Submit a request</title>
+</head>
+
+<body id="body" class="form__body">
+    <nav id="navbar">
+        <script src="../src/js/ru/navbar.js"></script>
+    </nav>
+    <div class="request">
+        <div class="container">
+            <h1 class="title">Оставить заявку</h1>
+
+            <!-- Описание блока -->
+            <div id="blockDescription">
+                <p>Желаете присоединиться к команде Uber и начать зарабатывать сегодня? Мы предоставляем вам две удобные
+                    опции
+                    для этого.
+                    Сначала, если у вас есть собственное авто и вы хотите самостоятельно управлять своим бизнесом,
+                    переходите на
+                    страницу <a href="yourcar.html" style="color:#1EACC7">На своей машине</a>. Это идеальный выбор для
+                    тех, кто хочет
+                    максимизировать доход, работая на своем графике.
+                    Второй вариант - <a href="ourcar.html" style="color:#1EACC7">На машине компании</a>. Если вы
+                    предпочитаете использовать
+                    нашу
+                    машину и получать стабильный доход без забот о техническом обслуживании, переходите на эту страницу.
+                    Просто заполните форму ниже, чтобы подать заявку. Начните зарабатывать сегодня, с удобством и
+                    гибкостью Uber!
+                </p>
+            </div>
+
+            <!-- Форма для оставления заявки -->
+            <form method="POST" id="form" action="sendmail.php">
+                <input type="text" id="firstName" name="firstName" placeholder="Имя" class="form__input _req">
+                <input type="text" id="lastName" name="lastName" placeholder="Фамилия" class="form__input _req">
+
+                <input type="tel" id="phoneNumber" name="phoneNumber" pattern="^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$"
+                    placeholder="Телефон" class="form__input _req">
+
+                <input type="email" id="email" name="email"
+                    placeholder="Email" class="form__input _req _email">
+
+                <select id="carType" name="carType">
+                    <option value="ownCar">На своей машине</option>
+                    <option value="companyCar">На машине компании</option>
+                    <option value="companyCar">На машине компании и на своей машине</option>
+                    <option value="companyCar">Пока не определился</option>
+                </select>
+
+                <input type="text" id="experience" name="experience" placeholder="Опыт вождения" class="form__input _req">
+
+                <select name="cities" id="cities">
+                    <option value="Архангельск">Город</option>
+                    <option value="Архангельск">Архангельск</option>
+                    <option value="Астрахань">Астрахань</option>
+                    <option value="Барнаул">Барнаул</option>
+                    <option value="Белгород">Белгород</option>
+                    <option value="Братск">Братск</option>
+                    <option value="Владивосток">Владивосток</option>
+                    <option value="Владикавказ">Владикавказ</option>
+                    <option value="Владимир">Владимир</option>
+                    <option value="Волгоград">Волгоград</option>
+                    <option value="Волжский">Волжский</option>
+                    <option value="Воронеж">Воронеж</option>
+                    <option value="Грозный">Грозный</option>
+                    <option value="Дзержинск">Дзержинск</option>
+                    <option value="Евпатория">Евпатория</option>
+                    <option value="Екатеринбург">Екатеринбург</option>
+                    <option value="Иваново">Иваново</option>
+                    <option value="Ижевск">Ижевск</option>
+                    <option value="Иркутск">Иркутск</option>
+                    <option value="Йошкар-Ола">Йошкар-Ола</option>
+                    <option value="Казань">Казань</option>
+                    <option value="Калининград">Калининград</option>
+                    <option value="Каменск-Уральский">Каменск-Уральский</option>
+                    <option value="Кампала">Кампала</option>
+                    <option value="Кемерово">Кемерово</option>
+                    <option value="Киров">Киров</option>
+                    <option value="Киров">Киров</option>
+                    <option value="Королёв">Королёв</option>
+                    <option value="Кострома">Кострома</option>
+                    <option value="Красноград">Красноград</option>
+                    <option value="Краснодар">Краснодар</option>
+                    <option value="Красноярск">Красноярск</option>
+                    <option value="Курган">Курган</option>
+                    <option value="Курск">Курск</option>
+                    <option value="Липецк">Липецк</option>
+                    <option value="Магадан">Магадан</option>
+                    <option value="Махачкала">Махачкала</option>
+                    <option value="Москва">Москва</option>
+                    <option value="Мытищи">Мытищи</option>
+                    <option value="Набережные Челны">Набережные Челны</option>
+                    <option value="Нальчик">Нальчик</option>
+                    <option value="Находка">Находка</option>
+                    <option value="Нижневартовск">Нижневартовск</option>
+                    <option value="Нижний Новгород">Нижний Новгород</option>
+                    <option value="Нижний Тагил">Нижний Тагил</option>
+                    <option value="Новокузнецк">Новокузнецк</option>
+                    <option value="Новороссийск">Новороссийск</option>
+                    <option value="Новосибирск">Новосибирск</option>
+                    <option value="Октябрьский">Октябрьский</option>
+                    <option value="Омск">Омск</option>
+                    <option value="Оренбург">Оренбург</option>
+                    <option value="Орёл">Орёл</option>
+                    <option value="Пенза">Пенза</option>
+                    <option value="Пермь">Пермь</option>
+                    <option value="Петрозаводск">Петрозаводск</option>
+                    <option value="Псков">Псков</option>
+                    <option value="Ростов-на-Дону">Ростов-на-Дону</option>
+                    <option value="Рыбинск">Рыбинск</option>
+                    <option value="Самара">Самара</option>
+                    <option value="Саратов">Саратов</option>
+                    <option value="Севастополь">Севастополь</option>
+                    <option value="Симферополь">Симферополь</option>
+                    <option value="Смоленск">Смоленск</option>
+                    <option value="Сочи">Сочи</option>
+                    <option value="Ставрополь">Ставрополь</option>
+                    <option value="Стерлитамак">Стерлитамак</option>
+                    <option value="Сургут">Сургут</option>
+                    <option value="Сызрань">Сызрань</option>
+                    <option value="Сыктывкар">Сыктывкар</option>
+                    <option value="Тверь">Тверь</option>
+                    <option value="Тирасполь">Тирасполь</option>
+                    <option value="Тольятти">Тольятти</option>
+                    <option value="Томск">Томск</option>
+                    <option value="Тула">Тула</option>
+                    <option value="Тюмень">Тюмень</option>
+                    <option value="Ульяновск">Ульяновск</option>
+                    <option value="Уфа">Уфа</option>
+                    <option value="Улан-Удэ">Улан-Удэ</option>
+                    <option value="Хабаровск">Хабаровск</option>
+                    <option value="Ханты-Мансийск">Ханты-Мансийск</option>
+                    <option value="Химки">Химки</option>
+                    <option value="Чебоксары">Чебоксары</option>
+                    <option value="Челябинск">Челябинск</option>
+                    <option value="Чита">Чита</option>
+                    <option value="Шахты">Шахты</option>
+                    <option value="Южно-Сахалинск">Южно-Сахалинск</option>
+                    <option value="Ярославль">Ярославль</option>
+                </select>
+
+                <textarea id="additionalInfo" name="additionalInfo" placeholder="Дополнительные сведения" cols="30"
+                    rows="10"></textarea>
+
+                <button class="btn" type="submit">Отправить</button>
+            </form>
+
+        </div>
+    </div>
+
+    <footer class="footer" id="footer">
+        <script src="../src/js/ru/footer.js"></script>
+    </footer>
+
+    <script src="../src/js/darkmode.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
+    <script>
+        $("#phoneNumber").mask("+7 (999) 999-99-99")
+    </script>
+    <script src="../src/js/script.js"></script>
+
+</body>
+
+</html>

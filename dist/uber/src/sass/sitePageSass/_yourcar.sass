@@ -1,0 +1,87 @@
+@import '../_variables.sass'
+*
+    transition: all .0s ease-in-out 0s
+
+.yourcar
+    position: relative
+    height: 100%
+    width: 100%
+    padding: 100px 0 0 0
+
+    margin: 0
+    background-color: $color22
+    .title__yourcar
+        color: $color2
+        text-align: left
+    .about__yourcar-content
+        .text__yourcar
+            color: $color13
+            font-size: 19px
+            line-height: 35px
+            word-spacing: 4px
+            letter-spacing: 1.5px
+        .img__yourcar
+            img                
+                position: relative
+                top: -20px 
+                left: 20px
+                max-width: 500px
+                margin: 10px
+                float: right
+                border-radius: 30px
+    .manual
+        .manual__block
+            padding: 20px 0
+            .title__manual
+                color: $color2
+            .text__manual
+                color: $color13
+                font-size: 19px
+                line-height: 35px
+                word-spacing: 4px
+                letter-spacing: 1.5px
+
+body.dark
+    .yourcar 
+        background-color: $color13
+        .title__yourcar
+                color: $color3
+        .text__yourcar
+            color: #ffffffa1
+    .manual
+        .manual__block
+            background-color: $color13
+            .title__manual
+                    color: $color3
+            .text__manual
+                color: #ffffffa1
+
+@media (max-width: 1020px)
+    .yourcar
+        .about__yourcar-content
+            .img__yourcar
+                display: none
+
+@media (max-width: 768px)
+    .yourcar
+        padding: 100px 0 25px 0
+        .title__yourcar
+            font-size: 23px
+        .about__yourcar-content
+
+            .text__yourcar
+                font-size: 16px
+                line-height: 30px
+                word-spacing: 2px
+                letter-spacing: 1px
+        .manual
+            .manual__block
+                padding: 10px 0
+                .title__manual
+                    font-size: 19px
+                    line-height: 35px
+                .text__manual
+                    font-size: 16px
+                    line-height: 30px
+                    word-spacing: 2px
+                    letter-spacing: 1px

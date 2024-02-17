@@ -1,0 +1,175 @@
+@import '../_variables.sass'
+*
+    transition: all .0s ease-in-out 0s
+
+.request
+    position: relative
+    height: 100%
+    width: 100%
+    padding: 100px 0 0 0
+    margin: 0
+    background-color: $color22
+    .container 
+        max-width: 1000px
+        #blockDescription,
+        .title
+            padding: 0 10px
+        .title
+            text-align: left 
+        div
+            color: #434242
+            font-size: 19px
+            line-height: 35px
+            word-spacing: 4px
+            letter-spacing: 1.5px
+        form
+            text-align: center
+            #firstName,
+            #lastName,
+            #carType,
+            #experience,
+            #phoneNumber,
+            #email,
+            #cities,
+            #additionalInfo
+                width: 48.2%
+                height: auto
+                position: relative
+                min-height: 1px
+                padding: 0 15px
+                margin: 10px 5px
+                height: 50px
+                border: 2px solid $color5
+                outline: 0
+                color: #757575
+                transition: 0.25s
+                &:focus
+                    box-shadow: 0 0 15px #1EACC7 
+            #firstName,
+            #lastName,
+            #phoneNumber
+                width: 31.5%
+            #additionalInfo
+                width: 98.2%
+                height: 250px
+                padding: 10px 15px
+            .btn
+                cursor: pointer
+                color: #fff
+                margin: 25px 0 0 0
+                font-size: 16px
+                line-height: 63px
+                text-transform: uppercase
+                border: none
+                border-radius: 4px
+                background: linear-gradient(0deg, #1EACC7 0%, #4CE2FF 100%)
+                padding: 0 150px
+                transition: 0.25s
+                &:hover 
+                    box-shadow: 0 0 15px #1EACC7
+
+body.dark
+    .request 
+        background-color: $color13
+        .container 
+            .title
+                color: $color3
+            div
+                color: #ffffffa1
+                text-decoration-color: $color5
+            form
+                ::placeholder 
+                        color: #ffffffa1
+                #firstName,
+                #lastName,
+                #carType,
+                #experience,
+                #phoneNumber,
+                #email,
+                #cities,
+                #additionalInfo
+                    background-color: $color14
+                    border: 1px solid $color5
+                    color: #ffffffa1
+                    &:focus
+                        border: 1.5px solid $color5
+                                 
+@media (max-width: 768px)
+    .request
+        .container
+            .title
+                font-size: 20px
+            div
+                font-size: 16px
+                line-height: 30px
+                word-spacing: 2px
+                letter-spacing: 1px
+
+@media (max-width: 748px)
+    .request
+        .container
+            form
+                #firstName,
+                #lastName,
+                #carType,
+                #experience,
+                #phoneNumber,
+                #email,
+                #cities,
+                #additionalInfo
+                    width: 47.5%
+                #firstName,
+                #lastName,
+                #phoneNumber
+                    width: 31%
+                #additionalInfo
+                    width: 98%
+
+@media (max-width: 597px)
+    .request
+        .container
+            #blockDescription,
+            .title
+                padding: 0 0px
+            form
+                text-align: left
+                #firstName,
+                #lastName,
+                #carType,
+                #experience,
+                #phoneNumber,
+                #email,
+                #cities,
+                #additionalInfo
+                    width: 100%
+                    margin: 10px 0px
+                #additionalInfo
+                    height: 150px
+                .btn
+                    text-align: center
+                    width: 100%
+                    padding: 0
+
+.form__input._error
+    box-shadow: 0 0 15px red !important
+    transition: 0.5s
+
+.form__body
+    position: relative
+    
+.form__body::after
+    content: ""
+    position: absolute
+    top: 0
+    left: 0
+    z-index: 100
+    width: 100%
+    height: 100%
+    background: rgba(51, 51, 51, 0.7) url('../icons/loading-waiting.gif') center / 50px no-repeat fixed
+    opacity: 0
+    visibility: hidden
+    transition: all 0.5s ease 0s
+
+.form__body._sending::after
+    opacity: 1
+    visibility: visible

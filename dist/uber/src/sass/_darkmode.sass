@@ -1,0 +1,257 @@
+@import '_variables'
+
+body 
+	margin: 0
+	padding: 0
+	color: $color16
+	background: $color22
+	&.dark 
+		h6 
+			color: $color24
+		
+		.label-dark, .label-light 
+			color: $color20
+		
+		.label-dark 
+			pointer-events: none
+		
+		&:hover 
+			color: $color27
+		
+		&:active 
+			color: $color21
+		
+		.toggle-switch 
+			width: 48px
+			&:after 
+				top: -2px
+				right: 2px
+				width: 32px
+				height: 32px
+				border-radius: 16px
+				background: $color22
+			
+			&:hover, &:hover:after 
+				background: $color27
+			
+			&:focus, &:active, &:active:after 
+				background: $color21
+			
+			&:before 
+				left: 4px
+				background: $color15
+			
+		.toggle-switch 
+			background: $color22
+h6 
+	color: $color16
+
+.load-flash 
+	z-index: 1000
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	position: absolute
+	background: $color15
+
+.mode-toggle 
+	display: inline-flex
+	flex-direction: row
+	align-items: center
+
+.label-dark 
+	letter-spacing: -0.15px
+	&:hover 
+		color: $color16
+	
+	&:active 
+		color: $color9
+	
+.label-light 
+	letter-spacing: -0.031px
+	&:hover 
+		color: $color27
+	
+	&:active 
+		color: $color21
+	
+
+.label-dark, .label-light 
+	padding: 8px 12px
+	min-width: 32px
+	text-align: center
+	color: $color17
+	display: none
+
+.toggle-switch 
+	margin: 0
+	padding: 0
+	width: 48px
+	height: 28px
+	border: none
+	outline: none
+	overflow: hidden
+	position: relative
+	border-radius: 14px
+	display: inline-block
+	background: $color16
+	&:before 
+		top: 4px
+		left: 24px
+		content: ""
+		width: 20px
+		height: 20px
+		display: block
+		position: absolute
+		border-radius: 12px
+		background: $color22
+	
+	&:after 
+		content: ""
+		top: 14px
+		right: 2px
+		width: 1px
+		height: 1px
+		display: block
+		position: absolute
+		border-radius: 0.5px
+		background: $color16
+	
+	&:hover, &:hover:after 
+		background: $color15
+	
+	&:focus, &:active, &:active:after 
+		background: $color13
+	
+
+.toggle-switch, .toggle-switch:before, .toggle-switch:after 
+	transition: all .2s ease-in-out
+
+.mode-toggle h6, body.dark .mode-toggle h6 
+	text-transform: uppercase
+
+.noselect 
+	user-select: none
+	-ms-user-select: none
+	-moz-user-select: none
+	-webkit-user-select: none
+
+.disableEasingTemporarily, .disableEasingTemporarily:after, .disableEasingTemporarily:before 
+	-o-transition-property: none 
+	-moz-transition-property: none 
+	-ms-transition-property: none 
+	-webkit-transition-property: none 
+	transition-property: none 
+	-o-transform: none 
+	-moz-transform: none 
+	-ms-transform: none 
+	-webkit-transform: none 
+	transform: none 
+	-webkit-animation: none 
+	-moz-animation: none 
+	-o-animation: none 
+	-ms-animation: none 
+	animation: none 
+
+
+body.dark
+	.header
+		.top__header
+			background-color: $color2
+			#languageButtons
+				#ruButton,#enButton
+					color: $color3
+			.header__link
+				color: #fff !important
+				&:hover
+					color: #1EACC7 !important
+		#header__link::after 
+			border-top: 5px solid #fff
+		#header__link:hover::after
+			border-top: 5px solid $color5
+		@media (max-width: 930px)
+			.logo_without_text::before 
+				color: #fff
+			.top__header::before 
+				background-color: #000
+			.header__burger
+				&::before, &::after 
+					background-color: #fff
+				&.active::before 
+					background-color: #fff
+				&.active::after 
+					background-color: #fff
+				span
+					background-color: #fff
+			.header__burger.active span 
+				background-color: #000	
+			.header__menu 
+				background-color: #212121
+			.header 
+				&__list 
+					li 
+						color: #000
+					.dropdown
+						.dropdown-menu
+							.dropdown-item
+								color: #fff
+                
+	.subheader
+		background-color: rgba(0, 0, 0, 0.6) 
+		&.lock
+			background-color: rgba(0, 0, 0, 0.6) 
+		.logo__text
+			color: $color3
+		.call__text
+			color: $color3
+		.phone
+			color: $color3
+			&:hover
+				color: $color21
+	.advantage
+		background-color: $color13
+		.toptitle
+			background-color: #fff
+			color: $color2
+		.title
+			color: $color3
+		.advantage__content-text
+			color: $color3
+			font-weight: 300
+	.mobile
+		background: url('../img/mobile_bg/mobile_bg_negate.png') center (center / cover) no-repeat
+		.toptitle
+			background-color: #fff
+			color: $color2
+		.title
+			color: $color3
+		.subtext_car
+			color: $color2
+	.condition
+		background-color: $color13
+		.toptitle
+			background-color: $color3
+			color: $color2
+		.title, .subtitle
+			color: $color3
+		.lists 
+			.list__item
+				color: $color3
+	.footer
+		background-color: $color13
+		.toplink
+			.toplink__item
+				&:hover 
+					color: #fff 
+		.sublink
+			.sublink__item
+				&:hover 
+					color: #fff 
+		.media
+			.media__item
+				&::before
+					background-color: $color13
+		.language
+			#languageButton
+				background-color: $color13

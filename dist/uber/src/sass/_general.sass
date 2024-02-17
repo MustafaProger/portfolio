@@ -1,0 +1,534 @@
+@import 'variables'
+@import 'mixins'	
+	
+.toptitle
+	@include toptitle__style
+.title
+	@include title__style
+.subtitle
+	@include subtitle__style
+
+a
+	text-decoration: none !important
+
+.hi
+	width: 100%
+	height: auto
+	padding-bottom: 100px
+	.hi__block
+		display: flex
+		justify-content: center
+		padding-top: 150px
+		span
+			&::before
+				content: ''
+				top: 0
+				left: 0
+				width: 10px
+				height: 110%
+				display: block
+				background-color: $color3
+		.ru__block, .en__block
+			position: relative
+			width: 100%
+			padding: 20px
+			.title, .content, .btn
+				color: $color3
+			.content
+				font-weight: 200
+			.btn
+				position: absolute
+				bottom: -50px
+				left: 0
+				margin: 20px
+				font-size: 20px
+				background-color: #1EACC7
+				transition: 0.25s
+				&:hover 
+					box-shadow: 0 0 15px #1EACC7
+		.ru__block
+			text-align: end
+			.title
+				text-align: end
+			.btn
+				right: 0
+		.en__block
+			text-align: start
+			.title
+				text-align: start
+			.btn
+				right: 0
+
+.main__page 
+	margin-bottom: -10px
+
+.container 
+	max-width: 1140px
+	padding: 0 25px
+
+.header 
+	position: relative
+	top: 0
+	left: 0
+	z-index: 5
+	width: 100%
+	&__content
+		display: flex
+		align-items: center
+		justify-content: center
+	&__menu
+		display: flex
+		align-items: center
+		justify-content: space-evenly
+	&__list 
+		display: flex
+		justify-content: space-between
+		list-style-type: none
+		padding: 23px 0px
+		margin-bottom: 5px
+		width: 100%
+		li 
+			padding: 0 15px
+		.dropdown
+			display: block
+			position: relative
+			top: 0
+			left: 0
+			.dropdown-menu
+				display: none
+				padding: 10px 0
+				border-radius: 10px
+				list-style-type: none
+				background-color: $color5
+				li
+					padding: 0
+				.dropdown-item
+					text-align: center
+					padding: 10px
+					color: $color3
+					&:hover
+						background: none
+						color: $color1
+			.dropdown-menu.show
+				display: inline-block
+				position: absolute
+				left: -20px
+				top: 43px
+				width: 180px
+	.dark
+		padding: 0 10px 0 0
+	&__link
+		display: block 
+		color: $color2 
+		font-size: 18px
+		transition: all .3s ease-in-out 0s
+		&:hover 
+			cursor: pointer
+			color: $color5
+			text-decoration: none
+	.top__header 
+		position: fixed
+		top: 0
+		left: 0
+		z-index: 5
+		width: 100%
+		height: 70px
+		background-color: $color3
+		#languageButtons
+			display: none
+			padding: 5px 0 0 25px
+			#ruButton,#enButton
+				background: none
+				color: $color2
+				outline: 0
+				border: 0
+				transition: all .3s ease-in-out 0s
+
+.subheader 
+	position: absolute
+	top: 70px
+	left: 0
+	z-index: 3
+	width: 100%
+	height: 87px
+	background-color: rgba(231, 231, 231, 0.6)
+	.logo__link 
+		display: block
+		margin-top: 16px
+	.logo__text 
+		margin-top: 4px
+		color: $color2
+		font-size: 13px
+		font-style: normal
+		font-weight: 100
+		opacity: 1
+	.call__text
+		display: block
+		color: $color2
+		text-align: right
+		font-size: 12px
+		font-style: normal
+		font-weight: 300
+		opacity: 0.6
+		margin-top: 13px
+	.phone
+		position: absolute
+		top: 40px
+		right: 12px
+		display: inline
+		margin-top: 5px
+		color: $color16
+		font-size: 21.9px
+		font-weight: 400
+		line-height: 12px
+		text-align: right
+		transition: all 0s ease-in-out 0s
+		&:hover
+			cursor: pointer
+
+	.call-btn
+		padding: 0
+		.phone__btn 
+			.btn
+				cursor: pointer
+				margin-top: 15px
+				margin-left: 22px
+				padding: 0px 7px
+				border: none
+				border-radius: 4px
+				background: linear-gradient(0deg, $color5 0%, #4CE2FF 100%)
+				color: $color3
+				font-size: 14px
+				line-height: 46px
+				text-transform: uppercase
+				margin-right: auto
+				transition: 0.25s
+				&:hover 
+					box-shadow: 0 0 15px #1EACC7
+
+.call__text__phone
+	padding-left: 0
+	margin-left: auto
+
+.promo 
+	position: relative
+	top: 0
+	left: 0
+	z-index: 1
+	padding: 0 0 100px 0
+	background: url('../img/uber_bg.png') center (center / cover) no-repeat fixed
+	color: $color3
+	&__content 
+		text-align: center
+		margin-top: 250px
+	&__header 
+		font-size: 52px
+		font-weight: 900
+		text-transform: uppercase
+		margin: 0
+		padding: 0
+	&__subheader 
+		padding: 0 0 10px 0
+		font-size: 31px
+		font-weight: 700
+		line-height: 48px
+		text-transform: uppercase
+	&__text 
+		font-size: 18px
+		font-weight: 200
+		line-height: 24px
+	a
+		cursor: pointer
+		padding: 20px 0
+		.promo__btn
+			cursor: pointer
+			color: $color3
+			text-align: center
+			font-size: 16px
+			line-height: 63px
+			text-transform: uppercase
+			border: none
+			border-radius: 4px
+			background: linear-gradient(0deg, $color5 0%, #4CE2FF 100%)
+			margin: 100px 0 0 0
+			padding: 0 50px
+			transition: 0.25s
+			&:hover 
+				box-shadow: 0 0 15px #1EACC7
+
+
+.advantage 
+	padding: 30px 10px 50px 10px
+	.row
+		.advantage__block
+			width: 100%
+			height: 180px
+			display: flex
+			padding: 10px 20px
+			margin: 20px 0
+		.advantage__content
+			width: 100%
+			margin-left: 30px
+		.advantage__content-title
+			color: $color5
+			font-size: 17px
+			font-weight: 400
+			line-height: 21px
+		.advantage__content-text
+			color: $color6
+			font-size: 15px
+			font-weight: 300
+			line-height: 21px
+.mobile
+	background: url('../img/mobile_bg/mobile_bg.png') center (center / cover) no-repeat
+	padding: 45px 0
+	&__content
+		.mobile__content-block-1
+			background: url('../img/mobile_cards/card-1.png') center (center / cover) no-repeat
+		.mobile__content-block-2
+			background: url('../img/mobile_cards/card-2.png') center (center / cover) no-repeat
+		.mobile__content-block-3
+			background: url('../img/mobile_cards/card-3.png') center (center / cover) no-repeat
+		.mobile__content-block-4
+			background: url('../img/mobile_cards/card-4.png') center (center / cover) no-repeat
+		.mobile__content-block-5
+			background: url('../img/mobile_cards/card-5.png') center (center / cover) no-repeat
+		.mobile__content-block-6
+			background: url('../img/mobile_cards/card-6.png') center (center / cover) no-repeat
+		.mobile__content-block
+			position: relative
+			max-width: 320px
+			min-height: 280px
+			height: auto 
+			margin: 0 auto
+			margin-bottom: 20px
+			padding: 92px 15px 0px 15px
+			.mobile__content-text
+				color: $color3
+				text-align: center
+				font-size: 24px
+				font-style: normal
+				font-weight: 400
+				line-height: 31px
+				text-transform: uppercase
+			.mobile__content-btn
+				cursor: pointer
+				display: inline-block
+				position: absolute
+				bottom: 35px
+				left: 50%
+				height: 25px
+				width: 25px
+				background-color: white
+				border-radius: 100%
+				transform: translateX(-50%)
+				&::after
+					content: ''
+					width: 50%
+					height: 2px
+					display: block
+					margin-top: 50%
+					margin-left: 25%
+					transform: translateY(-50%)
+					background-color: $color5
+				&::before
+					content: ''
+					position: absolute
+					width: 2px
+					height: 50%
+					display: block
+					margin-top: 25%
+					margin-left: 50%
+					transform: translateX(-50%)
+					background-color: $color5
+
+.chose
+	padding: 45px 0 150px 0
+	width: 100%
+	height: 100%
+	background-size: 100%
+	.toptitle
+		background-color: $color2
+		color: $color3
+	.title, .subtitle
+		color: $color2
+	.img__car
+		text-align: center
+		padding-top: 45px
+		max-width: 100%
+	.subtext_car
+		color: $color2
+		text-align: center
+		font-size: 18px
+		font-weight: 300
+		line-height: 24px
+
+.condition
+	padding: 25px 0 75px 0
+	.title
+		padding-bottom: 20px
+	.lists 
+		display: flex
+		justify-content: space-between
+		font-weight: 100
+		.list_1, .list_2
+			list-style: none
+			.title__list-blue
+				color: $color5
+				margin-bottom: 10px
+			.list__item
+				position: relative
+				padding: 3.5px 0
+				margin-left: 45px
+				color: $color2
+				font-weight: normal
+				transition: all 0s ease-in-out 0s
+				&::before
+					content: url('../icons/сheck_mark_done-blue.png')
+					position: absolute
+					left: -30px
+					top: 4px
+		.list_3, .list_4
+			list-style: none
+			.title__list-red
+				color: $color7
+				margin-bottom: 20px
+			.list__item
+				position: relative
+				padding: 3.5px 0
+				margin-left: 45px
+				color: $color2
+				font-weight: normal
+				transition: all 0s ease-in-out 0s
+				&::before
+					content: url('../icons/сheck_mark_done-red.png')
+					position: absolute
+					left: -30px
+					top: 4px
+
+.world
+	background-color: $color8
+	.container 
+		background: url('../img/world/world_bg.png') center (center / cover) no-repeat 
+		padding: 45px 0 0px 0
+		.content
+			height: 550px
+			.toptitle
+				background-color: $color3
+				color: $color2
+			.title, .subtitle
+				color: $color3
+			.world__subtext
+				font-size: 15px
+				text-transform: uppercase
+				text-align: center
+				padding-top: 340px
+				a
+					color: $color5
+					text-decoration: none
+					transition: all .25s ease-in-out 0s
+					&:hover
+						font-size: 16px
+.footer
+	position: relative
+	padding: 0
+	.line
+		width: 300px
+		margin: 20px auto 0 auto
+		color: $color2
+		text-align: center
+		border: none
+		border-top: 4px $color5 solid
+	.content
+		display: flex
+	.row
+		--bs-gutter-x: 0rem
+		margin-left: 0
+		margin-right: 0
+	.media
+		display: flex
+		padding-top: 25px
+		.facebook
+			padding: 2.5px 6px
+			margin-left: 25px 
+		.twitter
+			padding: 2.5px 6px
+		.linkdedin
+			padding: 2.5px 9px
+		.instagram
+			padding: 2.5px 8px
+		.media__item
+			position: relative
+			margin-left: 10px
+			transition: all 0s
+			&::before
+				content: ''
+				position: absolute
+				top: 0
+				left: 0
+				z-index: -1
+				width: 32px
+				height: 32px
+				display: block
+				background-color: $color8
+				border-radius: 100%
+	.link
+		text-align: center
+		.toplink
+			.toplink__item
+				color: #999
+				font-size: 15px
+				font-weight: 300
+				line-height: 68px 
+				text-transform: uppercase
+				&:hover
+					color: #000000
+					
+		.sublink
+			text-align: center
+			.sublink__item
+				color: #999
+				font-size: 11px
+				font-weight: 300
+				text-transform: uppercase
+				padding: 0 2px
+				&:hover
+					color: #212121
+		.language
+			display: flex
+			justify-content: center
+			margin: 20px 0 10px 0
+			#languageButton
+				background-color: $color22
+				color: $color5
+				outline: 0
+				border: 0
+	.download
+		display: flex
+		justify-content: flex-end
+		padding-right: 22px
+		.download__item
+			padding: 0 3px
+			
+#header__link
+	color: #000
+	&:hover
+		color: $color5 !important
+
+#header__link::after 
+	content: ""
+	width: 10px
+	height: 10px
+	position: absolute
+	left: 0
+	top: 0
+	margin: 10px 0 10px 98px
+	border-left: 5px solid transparent
+	border-right: 5px solid transparent
+	border-top: 5px solid $color2
+	z-index: 1
+	opacity: 1
+	transition: all .3s ease-in-out 0s
+
+#header__link:hover::after
+		border-top: 5px solid $color5
