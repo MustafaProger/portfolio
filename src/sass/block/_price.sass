@@ -1,0 +1,36 @@
+.price
+    .container
+        padding: 80px 25px
+    &__title
+        position: relative
+        text-align: center
+        @include circle
+        &::before
+            left: 50%
+            transform: translateX(-50%)
+    &__blocks
+        display: grid
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr))
+        justify-content: center
+        align-items: center
+        padding: 0 0 0 25px
+        gap: 20px 45px
+    &__item
+        display: grid
+        grid-template-columns: repeat(2, minmax(50px, 200px))
+        justify-content: center
+        align-items: start
+    &__name
+        position: relative
+        margin: 0 0 10px 0
+        @include circle
+        &::before
+            width: 15px
+            height: 15px
+            top: 0
+            left: -24px
+    &__self
+        justify-self: end
+    &__descr
+        grid-column: 1/3
+        font-weight: normal

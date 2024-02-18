@@ -1,20 +1,30 @@
 @media (max-height:700px)
     body
+        
         .navigation 
             .content 
                 height: 90vh
     
 @media (max-width: 1400px)
     body
+
         .sidepanel
             display: none
     
 @media (max-width: 1024px)
     body
+
         .about
             &__img
                 display: none
-                            
+            
+@media (max-width: 525px)
+    body
+
+        .price
+            &__blocks
+                grid-template-columns: repeat(1, minmax(200px, 1fr))
+                    
 @media (max-width: 768px)
     body [data-aos][data-aos][data-aos-delay="50"],
     body [data-aos][data-aos][data-aos-delay="100"],
@@ -30,6 +40,7 @@
             height: 640px
             .content
                 padding: 200px 0 0 0
+        
         .about
             padding: 50px 0 0 0
             .content
@@ -37,6 +48,7 @@
                     .skill
                         grid-template-columns: repeat(1, minmax(1px, auto))
                         grid-template-rows: repeat(2, minmax(1px, auto))
+        
         .resume
             padding: 50px 0 0 0
             .content
@@ -52,32 +64,40 @@
                         .resume__descr-item 
                             .resume__descr-head::before 
                                 top: 78px
+        
         .skills
             .divider
                 margin-bottom: 40px
-    .portfolio
-        .content
-            .my-projects
-                .runsmart
-                    grid-row: 2/3
-                    grid-column: 1/2
-                .uber
-                    grid-row: 1/3 !important
-                    grid-column: 2/3 !important
-                .project_moon
-                    grid-row: 3/4 !important
-                    grid-column: 1/3 !important
-                .sport
-                    grid-row: 4/5 !important
-                    grid-column: 1/3 !important
+        
+        .portfolio
+            .content
+                .my-projects
+                    .runsmart
+                        grid-row: 2/3
+                        grid-column: 1/2
+                    .uber
+                        grid-row: 1/3 !important
+                        grid-column: 2/3 !important
+                    .project_moon
+                        grid-row: 3/4 !important
+                        grid-column: 1/3 !important
+                    .sport
+                        grid-row: 4/5 !important
+                        grid-column: 1/3 !important
                     
 
 @media (max-width: 375px)
     body
+
         .container
             padding: 0 10px
+
         .promo
             .menu__burger
                 position: absolute
                 top: 5px
                 right: 5px
+
+        .price
+            .container
+                padding: 50px 10px
