@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    // работы с меню-бургер
+    // Работы с меню-бургер
     $('.menu__burger').on('click', function() {
         $('.navigation').addClass('active');
         $('.navigation').addClass('appearanceLayer');
@@ -29,7 +29,7 @@ $(document).ready(function() {
         });
     });
 
-    // изменения цвета sidepanel при скролле
+    // Изменения цвета sidepanel при скролле
     $(window).scroll(function() {
         if ($(window).scrollTop() > 350) {
             $('.sidepanel').addClass('сhange-theme');
@@ -38,7 +38,7 @@ $(document).ready(function() {
         }
     });
     
-    // плавная анимация при нажатии на гиперссылку
+    // Плавная анимация при нажатии на гиперссылку
     $('a[href^="#"').on('click', function() {
 
         let href = $(this).attr('href');
@@ -48,10 +48,47 @@ $(document).ready(function() {
         });
         return false;
     });
+
+    // Стиль на checkbox
+    $('#checkbox').change(function() {
+        // Проверяем, активен ли checkbox
+        if ($(this).is(':checked')) {
+            // Если активен, добавляем класс check
+            $(this).addClass('check');
+        } else {
+            // Если не активен, удаляем класс check
+            $(this).removeClass('check');
+        }
+    });
+
+    $("form").validate({
+        rules: {
+            name: {
+                required: true,
+                minlength: 2
+            },
+            email: {
+                required: true,
+                email: true
+            }
+        },
+        messages: {
+            name: {
+                required: "Это поля обязательное!",
+                minlength: "Пожалуйста, введите не менее {0} символов"
+            },
+            email: {
+                required: "Это поля обязательное!",
+                email: "Введите корректный e-amil"
+            },
+            checkbox: {
+                required: ''
+            }
+        }
+    });
 });
 
-
-//работа с анимацией процентов в progressBar
+// Работа с анимацией процентов в progressBar
 document.addEventListener('DOMContentLoaded', function() {
     let percentElements = document.querySelectorAll(".percent");
     let progressBarElements = document.querySelectorAll(".progressBar");
@@ -94,16 +131,4 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Проверяем и анимируем прогресс-бары при прокрутке
     window.addEventListener('scroll', checkAndAnimateProgressBars);
-
-
-    $('#checkbox').change(function() {
-        // Проверяем, активен ли checkbox
-        if ($(this).is(':checked')) {
-            // Если активен, добавляем класс check
-            $(this).addClass('check');
-        } else {
-            // Если не активен, удаляем класс check
-            $(this).removeClass('check');
-        }
-    });
 });
