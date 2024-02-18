@@ -94,4 +94,16 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Проверяем и анимируем прогресс-бары при прокрутке
     window.addEventListener('scroll', checkAndAnimateProgressBars);
+
+
+    $('#checkbox').change(function() {
+        // Проверяем, активен ли checkbox
+        if ($(this).is(':checked')) {
+            // Если активен, добавляем класс check
+            $(this).addClass('check');
+        } else {
+            // Если не активен, удаляем класс check
+            $(this).removeClass('check');
+        }
+    });
 });
