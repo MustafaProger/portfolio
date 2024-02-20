@@ -61,6 +61,11 @@ $(document).ready(function() {
         }
     });
 
+    // Маска для номера
+    $("input[name=phone]").mask("+7 999 999-99-99");
+
+
+    // Валидация номера
     $("form").validate({
         rules: {
             name: {
@@ -70,6 +75,9 @@ $(document).ready(function() {
             email: {
                 required: true,
                 email: true
+            },
+            phone: {
+                required: true,
             }
         },
         messages: {
@@ -83,8 +91,35 @@ $(document).ready(function() {
             },
             checkbox: {
                 required: ''
+            },
+            phone: {
+                required: "Это поля обязательное!",
             }
         }
+    });
+
+    //отправка на почту при помощи ajax
+    $('#contacts__form').submit(function(e) {
+        e.preventDefault();
+
+        if($(this).valid()) {
+            $('body').addClass('sending')
+        } else {
+            return
+        }
+
+        $.ajax({
+            type: "POST",
+            url: 'php/email.php',
+            data: $(this).serialize() 
+        }).done(function() {
+            $(this).find('input').val('');
+            $('body').removeClass('sending');
+            $("form").trigger("reset");
+            alert('Письмо отправлено!');
+        });
+
+        return false
     });
 });
 

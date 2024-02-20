@@ -25,7 +25,7 @@
     <meta name="theme-color" content="#ffffff">
 
     <!-- Primary Meta Tags -->
-    <title>Mustafa's Portfolio </title>
+    <title>Mustafa's Portfolio</title>
     <meta name="title" content="Mustafa's Portfolio" />
     <meta name="description"
         content="Всем привет! Меня зовут Мустафа и это мой сайт портфолио, в котором я рассказываю о себе как web-разработчик!" />
@@ -476,10 +476,11 @@
                             </svg></a>
                     </div>
                     <p class="title title_fz14" data-aos="fade-down" data-aos-once="true">Или оставьте ваши данные и я сам вам напишу:</p>
-                    <form action="#" class="contacts__form" data-aos="fade-down" data-aos-once="true">
-                        <input type="text" name="name" placeholder="Ваше имя" required>
-                        <input type="email" name="email" placeholder="Ваша почта" required>
-                        <textarea name="textarea" cols="30" rows="10" placeholder="Ваше сообщение"></textarea>
+                    <form action="#" class="contacts__form" id="contacts__form" data-aos="fade-down" data-aos-once="true">
+                        <input type="text" name="name" placeholder="Имя" required>
+                        <input type="email" name="email" placeholder="E-mail" required>
+                        <input type="tel" name="phone" placeholder="Номер телефона" required>
+                        <textarea name="textarea" cols="30" rows="10" placeholder="Дополнительная информация"></textarea>
                         <div class="contacts__policy">
                             <input type="checkbox" name="checkbox" id="checkbox" required>
                             <label for="checkbox" id="label__checkbox">
@@ -493,11 +494,15 @@
         </div>
     </section>
 
+    <div class="loading"></div>
     <!-- Подлючение JQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-    <!-- Подлючение JavaScript -->
+    <!-- Подлючение JQuery Validation -->
     <script src="js/jquery.validate.min.js"></script>
+
+    <!-- Подлючение файла маски для номера-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
 
     <!-- Подлючение JavaScript -->
     <script src="js/script.js"></script>
