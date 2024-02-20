@@ -64,7 +64,6 @@ $(document).ready(function() {
     // Маска для номера
     $("input[name=phone]").mask("+7 999 999-99-99");
 
-
     // Валидация номера
     $("form").validate({
         rules: {
@@ -98,7 +97,7 @@ $(document).ready(function() {
         }
     });
 
-    //отправка на почту при помощи ajax
+    // Отправка на почту при помощи ajax
     $('#contacts__form').submit(function(e) {
         e.preventDefault();
 
@@ -123,10 +122,19 @@ $(document).ready(function() {
         return false
     });
 
-    // закрытие модального окна при нажатии на close (&times;)
+    // Закрытие модального окна при нажатии на close (&times;)
     $("#close-thanks").on('click', function() {
         $('body').removeClass('sent');
     })
+
+    // Появление фиксированной кнопки page-up
+    $(window).scroll(function () { 
+        if($(window).scrollTop() > 1600) {
+            $('.page-up').fadeIn();
+        } else {
+            $('.page-up').fadeOut();
+        }
+    });
 });
 
 // Работа с анимацией процентов в progressBar
