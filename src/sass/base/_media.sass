@@ -14,6 +14,10 @@
         .about
             &__img
                 display: none
+        .overlay
+            .modal
+                .close
+                    right: -10%
                          
 @media (max-width: 768px)
     body [data-aos][data-aos][data-aos-delay="50"],
@@ -99,6 +103,13 @@
                     line-height: 23px
                 &_fz14
                     font-size: 14px
+
+        .overlay
+            .modal
+                width: 70%
+                .close
+                    top: -6%
+                    right: 2%
                     
 @media (max-width: 525px)
     body
@@ -121,6 +132,11 @@
         .price
             .container
                 padding: 50px 10px
+
+        .overlay
+            .modal
+                width: 80%
+                padding: 40px 20px
 
 @media (max-width: 320px)
     body

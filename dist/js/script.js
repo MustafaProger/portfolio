@@ -116,11 +116,17 @@ $(document).ready(function() {
             $(this).find('input').val('');
             $('body').removeClass('sending');
             $("form").trigger("reset");
-            alert('Письмо отправлено!');
+            $('overlay').fadeIn('slow');
+            $('body').addClass('sent');
         });
 
         return false
     });
+
+    // закрытие модального окна при нажатии на close (&times;)
+    $("#close-thanks").on('click', function() {
+        $('body').removeClass('sent');
+    })
 });
 
 // Работа с анимацией процентов в progressBar
